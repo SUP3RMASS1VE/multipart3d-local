@@ -1,5 +1,13 @@
 # Multipart3D Local
 
+
+The release ZIP is `dist/Multipart3D-Local-macOS-arm64.zip`. Upload that file as
+a GitHub Release asset; don't distribute the app through GitHub's source-code
+ZIP. The app is ad-hoc signed, not notarized, so macOS may still require users
+to approve it in Privacy & Security or remove its quarantine attribute on first
+launch.
+
+
 A local macOS app wrapping [multipart3d.com](https://multipart3d.com/) (by Roy Roeven,
 dreamlayer.nl). The whole website is mirrored into `site/` and served from a
 loopback-only HTTP server inside Electron, so the tool runs with no internet
@@ -524,11 +532,6 @@ npm start            # run from source
 npm run package      # build, ad-hoc sign, verify, and ZIP the macOS .app into dist/
 ```
 
-The release ZIP is `dist/Multipart3D-Local-macOS-arm64.zip`. Upload that file as
-a GitHub Release asset; don't distribute the app through GitHub's source-code
-ZIP. The app is ad-hoc signed, not notarized, so macOS may still require users
-to approve it in Privacy & Security or remove its quarantine attribute on first
-launch.
 
 Test hooks (environment variables read by `main.js`):
 
