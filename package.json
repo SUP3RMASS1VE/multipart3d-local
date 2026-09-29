@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "start": "electron .",
-    "package": "electron-packager . \"Multipart3D Local\" --platform=darwin --arch=arm64 --icon=build/icon.icns --out=dist --overwrite --app-bundle-id=com.local.multipart3d --prune=true --ignore=\"^/dist\""
+    "package": "electron-packager . \"Multipart3D Local\" --platform=darwin --arch=arm64 --icon=build/icon.icns --out=dist --overwrite --app-bundle-id=com.local.multipart3d --prune=true --ignore=\"^/dist\" && codesign --force --deep --sign - \"dist/Multipart3D Local-darwin-arm64/Multipart3D Local.app\" && codesign --verify --deep --strict --verbose=2 \"dist/Multipart3D Local-darwin-arm64/Multipart3D Local.app\" && ditto -c -k --sequesterRsrc --keepParent \"dist/Multipart3D Local-darwin-arm64/Multipart3D Local.app\" \"dist/Multipart3D-Local-macOS-arm64.zip\""
   },
   "devDependencies": {
     "electron": "38.1.0",
