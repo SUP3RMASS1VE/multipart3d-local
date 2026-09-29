@@ -1,0 +1,16 @@
+{
+  "name": "multipart3d-local",
+  "productName": "Multipart3D Local",
+  "version": "1.0.0",
+  "description": "Local desktop wrapper for the Multipart3D STL/3MF splitter",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . \"Multipart3D Local\" --platform=darwin --arch=arm64 --icon=build/icon.icns --out=dist --overwrite --app-bundle-id=com.local.multipart3d --prune=true --ignore=\"^/dist\""
+  },
+  "devDependencies": {
+    "electron": "38.1.0",
+    "electron-packager": "17.1.2"
+  }
+}
