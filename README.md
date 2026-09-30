@@ -1,11 +1,18 @@
 # Multipart3D Local
 
 
-The release ZIP is `dist/Multipart3D-Local-macOS-arm64.zip`. Upload that file as
-a GitHub Release asset; don't distribute the app through GitHub's source-code
-ZIP. The app is ad-hoc signed, not notarized, so macOS may still require users
-to approve it in Privacy & Security or remove its quarantine attribute on first
-launch.
+### ⚠️ Important Note for macOS Users
+
+The macOS build is **not signed with an Apple Developer certificate**, so Gatekeeper will block it on first launch with a message like *"multipart3d is damaged and can't be opened"* or *"cannot be opened because the developer cannot be verified"* (with a "Move to Bin" option).
+
+This is expected for unsigned apps — the app is safe to run. To open it:
+
+**Open Anyway**
+1. Try to open the app once (you'll see the warning), then click **Cancel**.
+2. Go to **System Settings → Privacy & Security**.
+3. Scroll to the **Security** section — you'll see a message about the app being blocked.
+4. Click **Open Anyway**, then confirm.
+
 
 
 A local macOS app wrapping [multipart3d.com](https://multipart3d.com/) (by Roy Roeven,
